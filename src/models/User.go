@@ -9,7 +9,7 @@ import (
 // User struct to model database table
 type User struct {
 	gorm.Model
-	ID        uint64    `gorm:"primaryKey; autoIncrement; not null" json:"id"`
+	ID        uint64    `gorm:"primaryKey; autoIncrement;" json:"id"`
 	Name      string    `gorm:"not null" json:"name,omitempty"`
 	Nickname  string    `json:"nickname,omitempty"`
 	Email     string    `gorm:"unique; not null" json:"email,omitempty"`
